@@ -2,7 +2,7 @@
 Online Voting System
 
 # Wiki
-Please read the wiki to see working stuff of iteration 1
+Please read the wiki to see working stuff of iteration plan 1
 
 # Installation
 1. git clone https://github.com/ufshaik/OVS
