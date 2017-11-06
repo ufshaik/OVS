@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<% include ../partials/head %>
+<body>
+<% include ../partials/nav %>
+
+  <div class="container-fluid">
+    <div class="container">
+    <div class="jumbotron">
+    <form action="/addvoter" method="post">
+    <div class="row">
+      <div class="col-sm-6">
+        <input autocomplete=off type="text" name="id" class="form-control"  placeholder="Id">
+        <input autocomplete=off type="text" name="name" class="form-control"  placeholder="Voter Name">
+        <input autocomplete=off type="text" name="age" class="form-control"  placeholder="age">
+        <br/>
+        <button type="submit" class="btn btn-primary" >Add voter</button>
+      </div>
+      </form>
+      <div class="col-sm-6" >
+        <h4>Voter List</h4>
+
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              <th>#</th>
+              <th>Name</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class ="voters">
+              <% for(var i=0; i<voters.length; i++) {%>
+                <td class="voter">
+                  <td><%= voters[i].id %></td>
+                  <td><%= voters[i].name %></td>
+                  <td><%= voters[i].age %></td>
+                </td>
+                </tr>
+                <% } %>
+            </tr>
+
+                </tbody>
+        </table>
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+  </div>
+
+
+
+</body>
+
+<footer id="footer">
+<% include ../partials/footer %>
+</footer>
+<footer id="underfooter">
+<% include ../partials/footer2 %>
+</footer>
+
+</html>

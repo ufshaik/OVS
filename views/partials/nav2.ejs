@@ -1,0 +1,37 @@
+<div class="jumbotron" id="fortop" align="center">
+  <h1 style="color:white;">Online Voting System</h1>
+</div>
+<nav class="navbar navbar-inverse navbar-static-top">
+<div class="container-fluid">
+      <ul class="nav navbar-nav">
+      </ul>
+
+  <ul class="nav navbar-nav navbar-right">
+    {{#if user}}
+          <li role="presentation"><a href="/">Voting System</a></li>
+          <li role="presentation"><a href="/users/logout">Logout</a></li>
+        {{else}}
+          <li role="presentation"><a href="/users/login">Login</a></li>
+          <li role="presentation"><a href="/users/register">Registration</a></li>
+        {{/if}}
+
+  </ul>
+</div>
+<div class="row">
+        <div class="col-lg-12">
+          {{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+          {{/if}}
+          {{#if error_msg}}
+            <div class="alert alert-danger">{{error_msg}}</div>
+          {{/if}}
+          {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+          {{/if}}
+
+          {{{body}}}
+        </div>
+      </div>
+
+
+</nav>
