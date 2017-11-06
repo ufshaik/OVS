@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<% include ../partials/head %>
+<body>
+<% include ../partials/nav %>
+
+  <div class="container-fluid">
+    <div class="container">
+    <div class="jumbotron">
+
+    <div class="row">
+      <div class="col-sm-4">
+
+    <h2>If candidate doesnt exist create him </h2>
+        <input autocomplete=off type="text" name="name2" id="name2" class="form-control"  placeholder="Replace Name">
+        <input autocomplete=off type="text" name="id" id="id" class="form-control"  placeholder="Id">
+        <input autocomplete=off type="text" name="name" id="name" class="form-control"  placeholder="Candidate Name">
+        <input autocomplete=off type="text" name="par" id="par" class="form-control"  placeholder="Individual Or Party">
+        <br/>
+        <button id="update" class="btn btn-primary" >Update</button>
+      </div>
+
+      <div class="col-sm-4" >
+        <h4>Candidate List</h4>
+
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              <th>#</th>
+              <th>Name</th>
+              <th> Individual / Party</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class ="candidates">
+              <% for(var i=0; i<candidates.length; i++) {%>
+                <td class="condidate">
+                  <td><%= candidates[i].id %></td>
+                  <td><%= candidates[i].name %></td>
+                  <td><%= candidates[i].par %></td>
+                </td>
+                </tr>
+                <% } %>
+            </tr>
+
+                </tbody>
+        </table>
+      </div>
+      <div class="col-sm-4">
+        <h2> Remove </h2>
+
+            <input autocomplete=off type="text" name="del" id="del" class="form-control"  placeholder="Name">
+            <br/>
+            <button id="delete" class="btn btn-primary" >Remove</button>
+          </div>
+      </div>
+  </div>
+  </div>
+  </div>
+</div>
+<script src="main.js"></script>
+<script src="jquery.min.js"></script>
+
+</body>
+
+<footer id="footer">
+<% include ../partials/footer %>
+</footer>
+<footer id="underfooter">
+<% include ../partials/footer2 %>
+</footer>
+
+</html>

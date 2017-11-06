@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="redirection.js"></script>
+  <script src="main.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="/partials/css/main.css" rel="stylesheet">
+
+  <head>
+    <title>OVS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <% include ../partials/nav2 %>
+    <div class="jumbotron" id="fortop" align="center">
+      <h2 style="color:white;"></h2>
+    </div>
+    <br/>
+
+    <div class="container-fluid">
+
+      <div class="row">
+	<div class="col-sm-6" ><div class="jumbotron" id="fortop" align="center">
+	    <h2 style="color:white;"> Complete registration</h2>
+	    <h2 style="color:white;">  here for </h2>
+	    <h2 style="color:white;"> Online Voting  </h2>
+	</div></div>
+
+	<div class="col-sm-6">
+
+    <form action="/register" method="post">
+    <div class="row">
+      <div class="col-sm-6">
+        <input autocomplete=off type="text" name="id" class="form-control"  placeholder="Id">
+        <input autocomplete=off type="text" name="name" class="form-control"  placeholder="Voter Name">
+        <input autocomplete=off type="text" name="age" class="form-control"  placeholder="age">
+  
+        <br/>
+        <button type="submit" class="btn btn-primary" >Add voter</button>
+      </div>
+      </form>
+
+
+
+  </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer">
+<% include ../partials/footer %>
+</footer>
+<footer id="underfooter">
+<% include ../partials/footer2 %>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Update and Delete</title>
+    
+  </head>
+  <body>
+    <ul class="candidates">
+      <% for(var i=0; i<candidates.length; i++) {%>
+        <li class="candidate">
+          <span><%= candidates[i].id %></span>
+          <span><%= candidates[i].name %></span>
+          <span><%= candidates[i].par %></span>
+        </li>
+        <% } %>
+      </ul>
+      <div>
+  <h2>Replace</h2>
+  <input type="text" name="id" id="name2" placeholder="Replace Name">
+  <input type="text" name="id" id="id" placeholder="Id">
+  <input type="text" name="name" id="name" placeholder="Name">
+  <input type="text" name="par" id="par" placeholder="Individual or Party">
+
+  <button id="update"> update </button>
+  </div>
+
+
+  <div>
+    <h2>Delete </h2>
+    <input type="text" name="del" id="del" placeholder="Name">
+    <button id="delete"> Delete Candidate </button>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="jquery.min.js"></script>
+  </body>
+</html>
