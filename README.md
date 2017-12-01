@@ -25,4 +25,20 @@ https://github.com/ufshaik/OVS/wiki
 7. nodemon if windows, npm start for linux
 
 # Start
-Once in please check localhost:3000/
+Once in please check localhost:3343/
+
+# Credentials
+
+> Voter:
+> id: Reaper
+> pass: starwars
+
+> Candidate:
+> id: Umar
+
+> Party:
+> id: Fate
+
+> Em:
+> id: admin
+> pass: admin
