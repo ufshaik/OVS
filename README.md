@@ -9,10 +9,11 @@ This project is divided into 4 parts,
 1. Candidate
 2. Party
 3. Voter
-4. Election Managet (aka EM)
+4. Election Manager (aka EM)
 
 # Wiki
 Please read the wiki to see the Working stuff and details on project.
+https://github.com/ufshaik/OVS/wiki
 
 # Installation
 1. git clone https://github.com/ufshaik/OVS
