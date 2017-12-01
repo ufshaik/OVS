@@ -9,7 +9,7 @@ This project is divided into 4 parts,
 4. Election Managet (aka EM)
 
 # Wiki
-Please read the wiki to see 
+Please read the wiki to see the Working stuff and details on project.
 
 # Installation
 1. git clone git@github.com:masb80/softwareEngineering.git
