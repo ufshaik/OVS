@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include ../partials/head %>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+  <div class="jumbotron" id="fortop" align="center">
+    <h1 style="color:white;">Election Manager</h1>
+  </div>
+  <h2 align="middle" style="color:#ff0000"> District </h2>
+  <div class="container">
+    <div class="well">Click on District Name for more details</div>
+  </div>
+  <div class="container">
+    <div class="well">Number of Seats for this election: <%= elections[0].seats%></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="well"> Districts in Election  </div>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Eid</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0;i<regs.length;i++) {%>
+          <tr>
+            <td><%= regs[i].id%></td>
+            <td>  <a href="/em/elections/district/ooshow/<%=regs[i]._id%>/<%= elections[0].eid%> "> <%= regs[i].name%></a></td>
+            <td><%= regs[i].eid%></td>
+          </tr>
+          <% } %>
+        </tbody>
+
+      </table>
+
+    </div>
+
+
+    <div class="col-sm-6">
+      <div class="well"> Districts Available </div>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Eid</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0;i<nregs.length;i++) {%>
+          <tr>
+            <td><%= nregs[i].id%></td>
+            <td><%= nregs[i].name%></td>
+            <td><%= nregs[i].eid%></td>
+            <td>      <form  action="/em/elections/district/oshow/<%= elections[0].eid%>/enroll/<%= nregs[i]._id%>" method="post">
+              <input type="number" name="eid" value= "<%=elections[0].eid%>" disabled>
+              <button type="submit" name="button" class="btn btn-warning"> Enroll </button>
+            </form>
+          </td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+
+  <div class="container">
+    <form action="/em/elections/district/cal/<%= elections[0]._id %>/" method="post">
+      <div align="right"> <button type="submit" name="button" class="btn btn-danger">End Election</button> </div>
+    </form>
+  </div>
+  <br />
+
+
+
+  <div class="container">
+    <div class="well"><a href="/em/home/5a10e055f8e87a2a28fb91e2">Click Me</a> For Admin Home</div>
+  </div>
+
+
+
+</body>
+
+</html>

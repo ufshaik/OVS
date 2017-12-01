@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include ../partials/head %>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+  <div class="jumbotron" id="fortop" align="center">
+    <h1 style="color:white;">Election Manager</h1>
+  </div>
+  <h2 align="middle" style="color:#ff0000"> District </h2>
+    <div class="row">
+      <div class="col-sm-1">
+
+      </div>
+
+      <div class="col-sm-5">
+        <div class="well"> Create a new District </div>
+
+        <form class="form" action="/em/elections/district/save" method="post">
+          <label for="id"> ID: </label>
+          <input type="text" name="id"  placeholder="Sno. Of District" class="form-control">
+          <label for="Name"> Name: </label>
+          <input type="text" name="name"  placeholder="Name Of District" class="form-control">
+          <input type="hidden" name="eid"  class="form-control" >
+          <br/>
+          <button type="submit" name="button" class="btn btn-primary">Create</button>
+        </form>
+
+      </div>
+
+      <div class="col-sm-6">
+        <div class="well"> Current Districts </div>
+        <table class="table table-hover">
+
+
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Eid</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<districts.length; i++) { %>
+          <tr>
+            <td><%=districts[i].id%> </td>
+            <td><%=districts[i].name%> </td>
+            <td><%=districts[i].eid%> </td>
+          </tr>
+          <% } %>
+        </tbody>
+
+</table>
+
+
+      </div>
+
+    </div>
+
+
+  </body>
+</html>

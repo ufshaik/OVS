@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%include ../partials/head %>
+</head>
+
+<body>
+  <div class="jumbotron" id="fortop" align="center">
+    <h2 style="color:white;">Elections</h2>
+  </div>
+  <br/>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <form action="/em/elections/create/save" method="post" role="form">
+
+          <div class="form-group">
+            <label for="P E-id">Previous Id: </label>
+            <input autocomplete=off type="text" class="form-control" placeholder="Id" value="<%=elections[0].eid %>" disabled>
+
+          </div>
+
+          <div class="form-group">
+            <label for="E-id"><span class="req">* </span>   <a href="#" data-toggle="popover" title="Numbers Only" data-content="Some content inside the popover">Id</a>: </label>
+            <input autocomplete=off type="number" name="eid" class="form-control" placeholder="Id" required>
+
+          </div>
+          <div class="form-group">
+            <label for="Start Date"> Start date</label>
+            <input type="date" name="sdate" placeholder="Start Date" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="End Date"> End date</label>
+            <input type="date" name="edate" placeholder="End Date" class="form-control" required>
+          </div>
+          <label> If it goes to round 2 dates will be initialized else discarded:</label>
+          <div class="form-group">
+            <label for="Start Date"> R2 Start date</label>
+            <input type="date" name="s1date" placeholder="Start Date" class="form-control" >
+
+          </div>  <div class="form-group">
+              <label for="Start Date">R2  End date</label>
+              <input type="date" name="e1date" placeholder="End Date" class="form-control" >
+
+            </div>
+
+          <div class="form-group">
+            <label for="Type"><span class="req">* </span>Type Of Election</label>
+            <select class="form-control" name="type" required>
+                <option value="District">District</option>
+                <option value="Presidential">Presidential</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="Status"><span class="req">* </span>Type Of Election</label>
+            <select class="form-control" name="status" required>
+              <option value="Ongoing">Ongoing</option>
+              <option value="Upcoming">Upcoming</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="Seats"><span class="req">* </span>Seats for District Election</label>
+            <input type="text" name="seats" class="form-control" placeholder="Seats">
+          </div>
+
+          <div class="form-group">
+            <input class="btn btn-success" type="submit" name="submit_reg" value="Create">
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-6">
+        <h1>Note:</h1>
+        <p> Please input dates for round 2 as well. If in any case it carries over, itll be initialised with dates else discarded</p>
+        <p>Seats aren't meant for presidential election only input it if district is selected</p>
+        <p>Make sure not to enter previous id</p>
+
+      </div>
+    </div>
+
+</body>
+
+</html>
