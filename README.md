@@ -16,7 +16,7 @@ Please read the wiki to see the Working stuff and details on project.
 
 # Installation
 1. git clone https://github.com/ufshaik/OVS
-2.cd OVS
+2. cd OVS
 3. npm install
 4. npm install bower -g if windows, if linux npm install bower
 5. bower install bootstrap if windows, npm install bootstrap if linux
