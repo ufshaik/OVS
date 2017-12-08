@@ -39,6 +39,6 @@ Once in please check localhost:3343/
 > Party:
 > id: Fate
 
-> Em:
+> Election manager:
 > id: admin
 > pass: admin
