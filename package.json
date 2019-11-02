@@ -15,7 +15,7 @@
     "express": "~4.15.5",
     "express-flash-notification": "^0.5.0",
     "express-session": "^1.15.6",
-    "mongoose": "^4.10.8",
+    "mongoose": "^5.7.7",
     "mongoose-sequence": "^4.0.1",
     "morgan": "~1.9.0",
     "node-async-loop": "^1.2.2",
